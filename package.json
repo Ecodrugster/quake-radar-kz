@@ -1,0 +1,5 @@
+{
+  "scripts": {"dev":"vite","build":"vite build","test":"vitest run"},
+  "dependencies": {"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest","vitest":"latest","leaflet":"latest","react-leaflet":"latest"},
+  "devDependencies": {}
+}
