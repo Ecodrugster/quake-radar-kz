@@ -1,6 +1,6 @@
 const usgs = 'https://earthquake.usgs.gov/fdsnws/event/1/';
 const params = (f, extra={}) => {
-  const values = {format:'geojson', latitude:f.lat, longitude:f.lon, maxradiuskm:f.radius, minmagnitude:f.minMagnitude, starttime:f.start, orderby:'time', ...extra};
+  const values = {format:'geojson', latitude:f.lat, longitude:f.lon, maxradiuskm:f.radius || 500, minmagnitude:f.minMagnitude || 5, starttime:f.start || '2024-01-01', orderby:'time', ...extra};
   if (f.end) values.endtime = f.end;
   return new URLSearchParams(Object.fromEntries(Object.entries(values).filter(([, value]) => value !== '' && value != null)));
 };
